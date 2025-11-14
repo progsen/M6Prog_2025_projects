@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Local API Tester</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    label { display: block; margin-top: 10px; }
+    textarea { width: 100%; height: 120px; }
+    pre { background: #f4f4f4; padding: 10px; border: 1px solid #ccc; }
+    select, input, button { margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Local API Tester</h2>
+
+  <label>API URL:</label>
+  <input type="text" id="url" value="http://localhost:88/bericht" style="width:100%">
+
+  <label>Method:</label>
+  <select id="method">
+    <option>GET</option>
+    <option>POST</option>
+    <option>PUT</option>
+    <option>DELETE</option>
+  </select>
+
+  <label>JSON Body:</label>
+  <textarea id="body">{ "key": "value" }</textarea>
+
+  <button onclick="sendRequest()">Send Request</button>
+
+  <h3>Response:</h3>
+  <pre id="response"></pre>
+
+  <script>
+    async function sendRequest() {
+      const url = document.getElementById('url').value;
+      const method = document.getElementById('method').value;
+      const bodyText = document.getElementById('body').value.trim();
+      const options = { method, headers: { 'Content-Type': 'application/json' } };
+
+      if (method !== 'GET' && bodyText) {
+        try {
+          options.body = JSON.stringify(JSON.parse(bodyText));
+        } catch (e) {
+          document.getElementById('response').textContent = "Invalid JSON body!";
+          return;
+        }
+      }
+
+      try {
+        const res = await fetch(url, options);
+        const text = await res.text();
+        let formatted;
+        try {
+          formatted = JSON.stringify(JSON.parse(text), null, 2);
+        } catch {
+          formatted = text;
+        }
+        document.getElementById('response').textContent = formatted;
+      } catch (err) {
+        document.getElementById('response').textContent = "Error: " + err;
+      }
+    }
+  </script>
+</body>
+</html>
