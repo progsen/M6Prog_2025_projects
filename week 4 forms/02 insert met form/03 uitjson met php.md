@@ -24,10 +24,10 @@
 ## refresh
 
 - lees:
-```
-nu moet je je pagina refreshen, dat is niet handig.
-we kunnen dat nu even met javascript oplossen. later maken we het mooier.
-```
+    ```
+    nu moet je je pagina refreshen, dat is niet handig.
+    we kunnen dat nu even met javascript oplossen. later maken we het mooier.
+    ```
 - aan het eind van je response van je fetch:
     >![](img/refresh.PNG)
 

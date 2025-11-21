@@ -1,13 +1,13 @@
 ## delen updaten
 
 - lees:
-```
-als we op deze manier posten willen we een deel van de site ophalen
-- niet de hele site
-- en dat dan op de juiste plek in de DOM vervangen
+    ```
+    als we op deze manier posten willen we een deel van de site ophalen
+    - niet de hele site
+    - en dat dan op de juiste plek in de DOM vervangen
 
-- wij gaan dat nu maken
-```
+    - wij gaan dat nu maken
+    ```
 
 ## dynamische content
 
@@ -29,13 +29,13 @@ als we op deze manier posten willen we een deel van de site ophalen
 ## javascript
 
 - maak het volgende:
-```
-- in je fetch:
-    - krijg je een response
-    - daar kan je de text van krijgen (zie plaatje 1) 
-    - dat is je subview HTML, zet die op je outerHTML van je main/section
-```
->1) ![](img/responsetext.PNG)
+    ```
+    - in je fetch:
+        - krijg je een response
+        - daar kan je de text van krijgen (zie plaatje 1) 
+        - dat is je subview HTML, zet die op je outerHTML van je main/section
+    ```
+> ![](img/responsetext.PNG)
 
 ## TESTEN
 

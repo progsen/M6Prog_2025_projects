@@ -14,12 +14,12 @@
 ## json maken
 
 - wij willen de volgende json, maak dat door alles uit het formulier te halen:
-```json
-{
-     "text": "json test!",
- "sign": "de maker"
-}
-```
+    ```json
+    {
+        "text": "json test!",
+    "sign": "de maker"
+    }
+    ```
 - log daarna je json:
     >![](img/logjson.PNG)
 

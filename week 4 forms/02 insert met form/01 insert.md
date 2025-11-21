@@ -14,12 +14,12 @@
     - handlePost
 
 - in de function maak je het volgende:
-```
-- je haalt uit $_POST de variabelen die je met het formulier gepost had
-    - daarmee maak je een `new` bericht (de dataclass)
-- je gebruikt de dataclass van je bericht om een Insert te doen
-    - de insert moet je misschien nog maken
-```
+    ```
+    - je haalt uit $_POST de variabelen die je met het formulier gepost had
+        - daarmee maak je een `new` bericht (de dataclass)
+    - je gebruikt de dataclass van je bericht om een Insert te doen
+        - de insert moet je misschien nog maken
+    ```
 
 ## Testen
 
