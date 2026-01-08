@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <h1>create password data</h1>
     <form method="post" action="">
-        <label for="password">Enter Password:</label>
+        <label for="password">Enter javascript Password HASH:</label>
         <input type="password" id="password" name="password" required>
         <button type="submit">Submit</button>
     </form>
